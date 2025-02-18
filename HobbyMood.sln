@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyMood", "HobbyMood\HobbyMood.csproj", "{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0413FA3B-461A-4B04-8736-6EB8439D0118}
+	EndGlobalSection
+EndGlobal
