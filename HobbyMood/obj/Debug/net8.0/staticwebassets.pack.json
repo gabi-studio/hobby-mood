@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\wwwroot\\images\\experiences\\56607504-e6b9-4d8d-850e-0be7bed22764.JPEG",
+      "PackagePath": "staticwebassets\\images\\experiences\\56607504-e6b9-4d8d-850e-0be7bed22764.JPEG"
+    },
+    {
       "Id": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -3,36 +3,163 @@
   "WorkspaceRootPath": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\experiencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\experiencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\experiencemoodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\experiencemoodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\moodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\moodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\experiencepage\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\experiencepage\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\hobbycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\hobbycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\hobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\hobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\viewmodels\\experienceedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\viewmodels\\experienceedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\experience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\experience.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\experiencepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\experiencepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\experiencemoodpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\experiencemoodpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\experiencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\experiencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\experiencepage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\experiencepage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\services\\experienceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\services\\experienceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\moodpage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\moodpage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\hobbycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\hobbycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\experiencemoodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\experiencemoodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\hobbypagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\hobbypagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\controllers\\moodpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\controllers\\moodpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\services\\moodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\services\\moodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\moodpage\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\moodpage\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_HobbyMood_5f49d22f_df29_41f5_a741_1a5f071d465e/True/SqlTable/dbo.Moods.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\experiencepage\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\experiencepage\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\interfaces\\iexperienceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\interfaces\\iexperienceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\interfaces\\iexperiencemoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\interfaces\\iexperiencemoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\moodpage\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\moodpage\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\hobbypage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\hobbypage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\viewmodels\\mooddetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\viewmodels\\mooddetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\mood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\mood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\moodpage\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\moodpage\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\viewmodels\\hobbydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\viewmodels\\hobbydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\hobbypage\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\hobbypage\\confirmdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\experiencemood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\experiencemood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\data\\migrations\\20250218132946_updateproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\data\\migrations\\20250218132946_updateproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\models\\viewmodels\\experiencemoodedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\models\\viewmodels\\experiencemoodedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\interfaces\\imoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\interfaces\\imoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\interfaces\\ihobbyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\interfaces\\ihobbyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|d:\\webdevelopmentcourse\\http5225-2025-backend2\\hobbymood\\hobbymood\\hobby-mood\\hobbymood\\hobbymood.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7C350DCB-E91A-4A7D-BF38-AC98C2F69EDE}|HobbyMood\\HobbyMood.csproj|solutionrelative:hobbymood\\hobbymood.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,104 +169,524 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\ExperiencePage\\Edit.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\ExperiencePage\\Edit.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\ExperiencePage\\Edit.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\ExperiencePage\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T05:07:39.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExperiencePageController.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperiencePageController.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Controllers\\ExperiencePageController.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperiencePageController.cs",
+              "RelativeToolTip": "HobbyMood\\Controllers\\ExperiencePageController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T17:06:04.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Experience.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Experience.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\Experience.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Experience.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\Experience.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAiwDMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T14:50:40.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExperienceEdit.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\ExperienceEdit.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\ViewModels\\ExperienceEdit.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\ExperienceEdit.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\ViewModels\\ExperienceEdit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T22:33:44.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T17:59:58.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-01T19:18:24.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExperienceMoodPageController.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceMoodPageController.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Controllers\\ExperienceMoodPageController.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceMoodPageController.cs",
+              "RelativeToolTip": "HobbyMood\\Controllers\\ExperienceMoodPageController.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAIwKAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T17:18:30.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ExperienceController.cs",
               "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceController.cs",
               "RelativeDocumentMoniker": "HobbyMood\\Controllers\\ExperienceController.cs",
               "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceController.cs",
               "RelativeToolTip": "HobbyMood\\Controllers\\ExperienceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAcwE8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T10:53:47.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20250218132946_updateproperties.cs",
-              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Data\\Migrations\\20250218132946_updateproperties.cs",
-              "RelativeDocumentMoniker": "HobbyMood\\Data\\Migrations\\20250218132946_updateproperties.cs",
-              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Data\\Migrations\\20250218132946_updateproperties.cs",
-              "RelativeToolTip": "HobbyMood\\Data\\Migrations\\20250218132946_updateproperties.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T13:29:46.962Z"
+              "DocumentIndex": 8,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\ExperiencePage\\Details.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\ExperiencePage\\Details.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\ExperiencePage\\Details.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\ExperiencePage\\Details.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T03:14:55.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExperienceMoodController.cs",
-              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceMoodController.cs",
-              "RelativeDocumentMoniker": "HobbyMood\\Controllers\\ExperienceMoodController.cs",
-              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceMoodController.cs",
-              "RelativeToolTip": "HobbyMood\\Controllers\\ExperienceMoodController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwIAAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ExperienceService.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Services\\ExperienceService.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Services\\ExperienceService.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Services\\ExperienceService.cs",
+              "RelativeToolTip": "HobbyMood\\Services\\ExperienceService.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAALwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T10:30:57.822Z"
+              "WhenOpened": "2025-02-25T15:49:14.946Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MoodController.cs",
-              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\MoodController.cs",
-              "RelativeDocumentMoniker": "HobbyMood\\Controllers\\MoodController.cs",
-              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\MoodController.cs",
-              "RelativeToolTip": "HobbyMood\\Controllers\\MoodController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAiwNcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T11:31:56.785Z"
+              "DocumentIndex": 10,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\Details.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\MoodPage\\Details.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\Details.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\MoodPage\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T07:55:37.517Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Hobby.cs",
-              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Hobby.cs",
-              "RelativeDocumentMoniker": "HobbyMood\\Models\\Hobby.cs",
-              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Hobby.cs",
-              "RelativeToolTip": "HobbyMood\\Models\\Hobby.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAACnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T10:23:37.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Experience.cs",
-              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Experience.cs",
-              "RelativeDocumentMoniker": "HobbyMood\\Models\\Experience.cs",
-              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Experience.cs",
-              "RelativeToolTip": "HobbyMood\\Models\\Experience.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAswDcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T10:17:13.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "HobbyController.cs",
               "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\HobbyController.cs",
               "RelativeDocumentMoniker": "HobbyMood\\Controllers\\HobbyController.cs",
               "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\HobbyController.cs",
               "RelativeToolTip": "HobbyMood\\Controllers\\HobbyController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwBMAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAkwA4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T11:30:41.212Z"
+              "WhenOpened": "2025-02-18T11:30:41.212Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
+              "Title": "ExperienceMoodController.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceMoodController.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Controllers\\ExperienceMoodController.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\ExperienceMoodController.cs",
+              "RelativeToolTip": "HobbyMood\\Controllers\\ExperienceMoodController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAqwKQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T10:30:57.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HobbyPageController.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\HobbyPageController.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Controllers\\HobbyPageController.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\HobbyPageController.cs",
+              "RelativeToolTip": "HobbyMood\\Controllers\\HobbyPageController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAIEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:29:42.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MoodPageController.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\MoodPageController.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Controllers\\MoodPageController.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Controllers\\MoodPageController.cs",
+              "RelativeToolTip": "HobbyMood\\Controllers\\MoodPageController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAiwHcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:52:38.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "HobbyMood\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "HobbyMood\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-01T19:38:30.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MoodService.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Services\\MoodService.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Services\\MoodService.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Services\\MoodService.cs",
+              "RelativeToolTip": "HobbyMood\\Services\\MoodService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:33:18.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\List.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\MoodPage\\List.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\List.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\MoodPage\\List.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T07:55:11.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\appsettings.json",
+              "RelativeDocumentMoniker": "HobbyMood\\appsettings.json",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\appsettings.json",
+              "RelativeToolTip": "HobbyMood\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T19:17:37.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "HobbyMood\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Properties\\launchSettings.json",
+              "RelativeToolTip": "HobbyMood\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T19:17:52.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "dbo.Moods [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_HobbyMood_5f49d22f_df29_41f5_a741_1a5f071d465e/True/SqlTable/dbo.Moods.sql",
+              "ToolTip": "dbo.Moods [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-28T17:28:41.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T16:44:34.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ConfirmDelete.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\ExperiencePage\\ConfirmDelete.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\ExperiencePage\\ConfirmDelete.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\ExperiencePage\\ConfirmDelete.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\ExperiencePage\\ConfirmDelete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T03:09:12.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IExperienceMoodService.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IExperienceMoodService.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Interfaces\\IExperienceMoodService.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IExperienceMoodService.cs",
+              "RelativeToolTip": "HobbyMood\\Interfaces\\IExperienceMoodService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:36.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IExperienceService.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IExperienceService.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Interfaces\\IExperienceService.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IExperienceService.cs",
+              "RelativeToolTip": "HobbyMood\\Interfaces\\IExperienceService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:46:41.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ConfirmDelete.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\ConfirmDelete.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\MoodPage\\ConfirmDelete.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\ConfirmDelete.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\MoodPage\\ConfirmDelete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T07:55:51.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\HobbyPage\\Details.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\HobbyPage\\Details.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\HobbyPage\\Details.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\HobbyPage\\Details.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T18:02:46.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MoodDetails.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\MoodDetails.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\ViewModels\\MoodDetails.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\MoodDetails.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\ViewModels\\MoodDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T17:01:07.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Mood.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Mood.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\Mood.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\Mood.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\Mood.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:36:23.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "New.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\New.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\MoodPage\\New.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\MoodPage\\New.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\MoodPage\\New.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T07:56:19.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "HobbyDetails.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\HobbyDetails.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\ViewModels\\HobbyDetails.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\HobbyDetails.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\ViewModels\\HobbyDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:38:24.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ConfirmDelete.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\HobbyPage\\ConfirmDelete.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\HobbyPage\\ConfirmDelete.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\HobbyPage\\ConfirmDelete.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\HobbyPage\\ConfirmDelete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T18:03:50.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "ExperienceMood.cs",
               "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ExperienceMood.cs",
               "RelativeDocumentMoniker": "HobbyMood\\Models\\ExperienceMood.cs",
               "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ExperienceMood.cs",
               "RelativeToolTip": "HobbyMood\\Models\\ExperienceMood.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowBMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T01:10:40.629Z"
+              "WhenOpened": "2025-02-18T01:10:40.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ServiceResponse.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ServiceResponse.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\ServiceResponse.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ServiceResponse.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\ServiceResponse.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T14:40:10.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\ViewModels\\ErrorViewModel.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\ErrorViewModel.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\ViewModels\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:39:40.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "HobbyMood\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "HobbyMood\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T16:45:08.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ExperienceMoodEdit.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\ExperienceMoodEdit.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Models\\ViewModels\\ExperienceMoodEdit.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Models\\ViewModels\\ExperienceMoodEdit.cs",
+              "RelativeToolTip": "HobbyMood\\Models\\ViewModels\\ExperienceMoodEdit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T17:22:34.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IMoodService.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IMoodService.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Interfaces\\IMoodService.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IMoodService.cs",
+              "RelativeToolTip": "HobbyMood\\Interfaces\\IMoodService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:30:41.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IHobbyService.cs",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IHobbyService.cs",
+              "RelativeDocumentMoniker": "HobbyMood\\Interfaces\\IHobbyService.cs",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\Interfaces\\IHobbyService.cs",
+              "RelativeToolTip": "HobbyMood\\Interfaces\\IHobbyService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA9wBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T14:33:23.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "HobbyMood.csproj",
+              "DocumentMoniker": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\HobbyMood.csproj",
+              "RelativeDocumentMoniker": "HobbyMood\\HobbyMood.csproj",
+              "ToolTip": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\HobbyMood.csproj",
+              "RelativeToolTip": "HobbyMood\\HobbyMood.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-25T13:54:15.804Z",
+              "EditorCaption": ""
             }
           ]
         }

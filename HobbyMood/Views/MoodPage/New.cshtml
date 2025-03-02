@@ -1,0 +1,29 @@
+﻿@model HobbyMood.Models.MoodDto
+
+@{
+    ViewData["Title"] = "Add New Mood";
+}
+
+<h1>Add New Mood</h1>
+
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="MoodName" class="control-label"></label>
+        <input asp-for="MoodName" class="form-control" />
+        <span asp-validation-for="MoodName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-2">
+        <input type="submit" value="Add Mood" class="btn btn-primary" />
+    </div>
+</form>
+
+<div class="mt-3">
+    <a asp-action="List">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

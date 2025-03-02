@@ -1,6 +1,8 @@
 using HobbyMood.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using HobbyMood.Models.ViewModels;
+
 
 namespace HobbyMood.Controllers
 {

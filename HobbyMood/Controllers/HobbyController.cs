@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using HobbyMood.Interfaces;
+using HobbyMood.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using HobbyMood.Data;
-using HobbyMood.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HobbyMood.Controllers
 {
@@ -14,139 +10,118 @@ namespace HobbyMood.Controllers
     [ApiController]
     public class HobbyController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IHobbyService _hobbyService;
 
-        // Dependency injection of database context
-        public HobbyController(ApplicationDbContext context)
+        // Dependency injection of service interface
+        public HobbyController(IHobbyService hobbyService)
         {
-            _context = context;
+            _hobbyService = hobbyService;
         }
 
+
         /// <summary>
-        /// Returns a list of hobbies with their experience count, hours spent, and typical moods.
+        /// Returns a list of Hobbies
         /// </summary>
-        /// <returns>200 OK with HobbyDto List</returns>
-        /// <example>GET: api/Hobby/List</example>
+        /// <returns>
+        /// 200 OK
+        /// [{HobbyDto},{HobbyDto},..]
+        /// </returns>
+        /// <example>
+        /// GET: api/Hobby/List -> [{HobbyDto},{HobbyDto},..]
+        /// </example>
         [HttpGet(template: "List")]
         public async Task<ActionResult<IEnumerable<HobbyDto>>> ListHobbies()
         {
-            List<Hobby> hobbies = await _context.Hobbies.ToListAsync();
-            List<HobbyDto> hobbyDtos = new List<HobbyDto>();
-
-            foreach (Hobby h in hobbies)
-            {
-                hobbyDtos.Add(new HobbyDto()
-                {
-                    HobbyId = h.HobbyId,
-                    HobbyName = h.HobbyName,
-
-                    // numer of experiences with this hobby
-                    NumberofExperiences = _context.Experiences.Where(e => e.HobbyId == h.HobbyId).Count(),
-
-             
-                    // sum of hours spent on experiences for each hobby
-                    HoursSpent = _context.Experiences
-                        .Where(e => e.HobbyId == h.HobbyId)
-                        .ToList() 
-                        .Sum(e => e.DurationinHours),
-
-                    // getting the 3 most common moods experienced with each hobby
-                    TypicalMoods = _context.ExperienceMoods
-                        .Where(em => em.Experience.HobbyId == h.HobbyId)
-                        .GroupBy(em => em.Mood.MoodName)
-                        .OrderByDescending(g => g.Count())
-                        .Take(3)
-                        .Select(g => g.Key)
-                        .ToList()
-                });
-            }
-
+            IEnumerable<HobbyDto> hobbyDtos = await _hobbyService.ListHobbies();
             return Ok(hobbyDtos);
         }
 
+
         /// <summary>
-        /// Returns a single hobby by its ID.
+        /// Returns a single Hobby specified by its {id}
         /// </summary>
-        /// <param name="id">Hobby ID</param>
-        /// <returns>200 OK with HobbyDto, or 404 Not Found</returns>
-        /// <example>GET: api/Hobby/FindHobby/1</example>
+        /// <param name="id">The Hobby id</param>
+        /// <returns>
+        /// 200 OK
+        /// {HobbyDto}
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// GET: api/Hobby/Find/1 -> {HobbyDto}
+        /// </example>
         [HttpGet(template: "Find/{id}")]
         public async Task<ActionResult<HobbyDto>> FindHobby(int id)
         {
-            var hobbyEntity = await _context.Hobbies.FindAsync(id);
+            var hobby = await _hobbyService.FindHobby(id);
 
-            if (hobbyEntity == null)
+            if (hobby == null)
             {
                 return NotFound();
             }
-
-            // getting list of experiences
-            var experiences = await _context.Experiences
-                .Where(e => e.HobbyId == id)
-                .ToListAsync();
-
-            // the total hours spent on experiences with hobby
-            decimal hoursSpent = experiences.Sum(e => e.DurationinHours); 
-
-            // getting the 3 most common moods experienced with hobby
-            var typicalMoods = await _context.ExperienceMoods
-                .Where(em => em.Experience.HobbyId == id)
-                .GroupBy(em => em.Mood.MoodName)
-                .OrderByDescending(g => g.Count())
-                .Take(3)
-                .Select(g => g.Key)
-                .ToListAsync();
-
-            // hobby dto
-            HobbyDto hobbyDto = new HobbyDto()
+            else
             {
-                HobbyId = hobbyEntity.HobbyId,
-                HobbyName = hobbyEntity.HobbyName,
-                NumberofExperiences = experiences.Count, 
-                HoursSpent = hoursSpent,
-                TypicalMoods = typicalMoods
-            };
-
-            return Ok(hobbyDto);
+                return Ok(hobby);
+            }
         }
 
 
+        /// <summary>
+        /// Returns a list of Experiences related to a specific Hobby
+        /// </summary>
+        /// <param name="hobbyId">The Hobby ID</param>
+        /// <returns>
+        /// 200 OK
+        /// [{ExperienceDto},{ExperienceDto},..]
+        /// </returns>
+        /// <example>
+        /// GET: api/Hobby/Experiences/3 -> [{ExperienceDto},{ExperienceDto},..]
+        /// </example>
+        [HttpGet(template: "Experiences/{hobbyId}")]
+        public async Task<IActionResult> ListExperiencesForHobby(int hobbyId)
+        {
+            IEnumerable<ExperienceDto> experienceDtos = await _hobbyService.ListExperiencesForHobby(hobbyId);
+            return Ok(experienceDtos);
+        }
 
-   
 
         /// <summary>
-        /// Adds a new hobby
+        /// Adds a Hobby
         /// </summary>
         /// <param name="hobbyDto">The required information to add the hobby (HobbyName)</param>
         /// <returns>
         /// 201 Created
-        /// Location: api/AddHobby/Find/{HobbyId}
+        /// Location: api/Hobby/Find/{HobbyId}
         /// {HobbyDto}
         /// or
-        /// 400 Bad Request
+        /// 404 Not Found
         /// </returns>
+        /// <example>
+        /// POST: api/Hobby/Add
+        /// Request Headers: Content-Type: application/json, cookie: .AspNetCore.Identity.Application={token}
+        /// Request Body: {HobbyDto}
+        /// -> Response Code: 201 Created
+        /// Response Headers: Location: api/Hobby/Find/{HobbyId}
+        /// </example>
         [HttpPost(template: "Add")]
+        [Authorize]
         public async Task<ActionResult<Hobby>> AddHobby(HobbyDto hobbyDto)
         {
-           
+            ServiceResponse response = await _hobbyService.AddHobby(hobbyDto);
 
-            // create a new Hobby entity
-            Hobby hobby = new Hobby()
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
-                HobbyName = hobbyDto.HobbyName
-            };
+                return NotFound(response.Messages);
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
 
-            
-
-            _context.Hobbies.Add(hobby);
-            await _context.SaveChangesAsync();
-
-            //  adding the new hobby to the database
-            _context.Hobbies.Add(hobby);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("Find", new { id = hobby.HobbyId }, hobby);
+            // returns 201 Created with Location
+            return Created($"api/Hobby/Find/{response.CreatedId}", hobbyDto);
         }
+
 
         /// <summary>
         /// Updates an existing hobby
@@ -160,52 +135,30 @@ namespace HobbyMood.Controllers
         /// or
         /// 204 No Content
         /// </returns>
+        /// <example>
+        /// PUT: api/Hobby/Update/5
+        /// Request Headers: Content-Type: application/json, cookie: .AspNetCore.Identity.Application={token}
+        /// Request Body: {HobbyDto}
+        /// -> Response Code: 204 No Content
+        /// </example>
         [HttpPut(template: "Update/{id}")]
-        public async Task<IActionResult> UpdateHobby(int id, HobbyDto hobbyDto)
+        [Authorize]
+        public async Task<ActionResult> UpdateHobby(int id, HobbyDto hobbyDto)
         {
-            // validating hobby id
             if (id != hobbyDto.HobbyId)
             {
-                // 400 Bad Request
                 return BadRequest();
             }
 
-            // find existing hobby in db
-            //var db = _context;
-            var existingHobby = await _context.Hobbies.FindAsync(id);
+            ServiceResponse response = await _hobbyService.UpdateHobby(id, hobbyDto);
 
-            // aata must link to a valid existing entity
-            if (existingHobby == null)
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
-                // 404 Not Found
-                return NotFound();
+                return NotFound(response.Messages);
             }
-
-            // create a new instance of Hobby
-            Hobby hobby = new Hobby()
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
             {
-                HobbyId = hobbyDto.HobbyId,
-                HobbyName = hobbyDto.HobbyName
-            };
-
-            // flags that the object has changed
-            _context.Entry(hobby).State = EntityState.Modified;
-
-            try
-            {
-                // update the db
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!HobbyExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return StatusCode(500, response.Messages);
             }
 
             return NoContent();
@@ -213,61 +166,103 @@ namespace HobbyMood.Controllers
 
 
         /// <summary>
-        /// Checks if a hobby exists by ID.
+        /// Deletes the Hobby
         /// </summary>
-        /// <param name="id">Hobby ID</param>
-        /// <returns>True if hobby exists, otherwise false.</returns>
-        private bool HobbyExists(int id)
+        /// <param name="id">The id of the hobby to delete</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// DELETE: api/Hobby/Delete/7
+        /// Headers: cookie: .AspNetCore.Identity.Application={token}
+        /// -> Response Code: 204 No Content
+        /// </example>
+        [HttpDelete("Delete/{id}")]
+        [Authorize]
+        public async Task<ActionResult> DeleteHobby(int id)
         {
-            return _context.Hobbies.Any(e => e.HobbyId == id);
-        }
+            ServiceResponse response = await _hobbyService.DeleteHobby(id);
 
-
-
-        /// <summary>
-        /// Deletes a hobby by ID.
-        /// </summary>
-        /// <param name="id">Hobby ID</param>
-        /// <returns>204 No Content, or 404 Not Found</returns>
-        /// <example>DELETE: api/Hobby/DeleteHobby/1</example>
-        [HttpDelete(template: "Delete/{id}")]
-        public async Task<IActionResult> DeleteHobby(int id)
-        {
-            
-
-            Console.WriteLine($"The id is {id}");
-
-            // find hobby with its related experiences
-            var hobby = await _context.Hobbies.FindAsync(id);
-            //.Include(e => e.Experiences)
-            //.FirstOrDefaultAsync(h => h.HobbyId == id);
-
-            if (hobby == null)
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
-                //Console.WriteLine($"The id {id} is not found");
                 return NotFound();
-
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
             }
 
-            //// sever the relationship by setting HobbyId in experiences to null
-            ////reference: https://learn.microsoft.com/en-us/ef/core/saving/cascade-delete
-            //foreach (var experience in hobby.Experiences)
-            //{
-            //    experience.HobbyId = null; 
-            //}
-
-            //await db.SaveChangesAsync(); 
-
-            // delete the hobby
-            _context.Hobbies.Remove(hobby);
-            await _context.SaveChangesAsync();
-
-            //Console.WriteLine($"The hobby {id} has been deleted");
-            //return 204 
             return NoContent();
         }
 
 
+        /// <summary>
+        /// Links a Hobby to an Experience
+        /// </summary>
+        /// <param name="hobbyId">The id of the Hobby</param>
+        /// <param name="experienceId">The id of the Experience</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// POST: api/Hobby/Link?HobbyId=4&ExperienceId=12
+        /// /// Headers: cookie: .AspNetCore.Identity.Application={token}
+        /// -> Response Code: 204 No Content
+        /// </example>
+        [HttpPost("Link")]
+        [Authorize]
+        public async Task<ActionResult> LinkHobbyToExperience(int hobbyId, int experienceId)
+        {
+            ServiceResponse response = await _hobbyService.LinkHobbyToExperience(hobbyId, experienceId);
 
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
+            {
+                return NotFound();
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
+
+            return NoContent();
+        }
+
+
+        /// <summary>
+        /// Unlinks a Hobby from an Experience
+        /// </summary>
+        /// <param name="hobbyId">The id of the Hobby</param>
+        /// <param name="experienceId">The id of the Experience</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// DELETE: api/Hobby/Unlink?HobbyId=4&ExperienceId=12
+        /// Headers: cookie: .AspNetCore.Identity.Application={token}
+        /// -> Response Code: 204 No Content
+        /// </example>
+        [HttpDelete("Unlink")]
+        [Authorize]
+        public async Task<ActionResult> UnlinkHobbyFromExperience(int hobbyId, int experienceId)
+        {
+            ServiceResponse response = await _hobbyService.UnlinkHobbyFromExperience(hobbyId, experienceId);
+
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
+            {
+                return NotFound();
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
+
+            return NoContent();
+        }
     }
 }

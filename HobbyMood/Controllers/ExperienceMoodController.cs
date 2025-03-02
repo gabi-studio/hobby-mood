@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using HobbyMood.Interfaces;
+using HobbyMood.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using HobbyMood.Data;
-using HobbyMood.Models;
 
 namespace HobbyMood.Controllers
 {
@@ -14,135 +11,97 @@ namespace HobbyMood.Controllers
     [ApiController]
     public class ExperienceMoodController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IExperienceMoodService _experienceMoodService;
 
-        // Dependency injection of database context
-        public ExperienceMoodController(ApplicationDbContext context)
+        // Dependency injection of service interfaces
+        public ExperienceMoodController(IExperienceMoodService experienceMoodService)
         {
-            _context = context;
+            _experienceMoodService = experienceMoodService;
         }
 
         /// <summary>
-        /// Returns a list of all experience moods with related experience and mood data.
+        /// Returns a list of all experience moods.
         /// </summary>
-        /// <returns>200 OK with ExperienceMoodDto List</returns>
-        /// <example>GET: api/ExperienceMood/List => { "experienceMoodId": 1, "experienceId": 3, "moodId": 5, "experienceName": "Hiked Skyline Trail", "moodName": "Energized", "experienceDate": "2022-07-05", "moodIntensityBefore": 3, "moodIntensityAfter": 8 }</example>
+        /// <returns>
+        /// 200 OK
+        /// [{ExperienceMoodDto},{ExperienceMoodDto},..]
+        /// </returns>
+        /// <example>
+        /// GET: api/ExperienceMood/List -> [{ExperienceMoodDto},{ExperienceMoodDto},..]
+        /// </example>
         [HttpGet("List")]
         public async Task<ActionResult<IEnumerable<ExperienceMoodDto>>> ListExperienceMoods()
         {
-            List<ExperienceMood> experienceMoods = await _context.ExperienceMoods
-                .Include(em => em.Experience)
-                .Include(em => em.Mood)
-                .ToListAsync();
-
-            // empty list of dto ExperienceMoodDto
-            List<ExperienceMoodDto> experienceMoodDtos = new List<ExperienceMoodDto>();
-
-            foreach (var em in experienceMoods)
-            {
-                // creating an instance of ExperienceMoodDto
-                experienceMoodDtos.Add(new ExperienceMoodDto()
-                {
-                    ExperienceMoodId = em.ExperienceMoodId,
-                    ExperienceId = em.ExperienceId,
-                    MoodId = em.MoodId,
-                    ExperienceName = em.Experience.ExperienceName,
-                    MoodName = em.Mood.MoodName,
-                    ExperienceDate = em.Experience.ExperienceDate,
-                    MoodIntensityBefore = em.MoodIntensityBefore,
-                    MoodIntensityAfter = em.MoodIntensityAfter
-                });
-            }
-
+            IEnumerable<ExperienceMoodDto> experienceMoodDtos = await _experienceMoodService.ListExperienceMoods();
             return Ok(experienceMoodDtos);
         }
-
 
         /// <summary>
         /// Returns a specific experience mood by ID.
         /// </summary>
-        /// <param name="id">ExperienceMood ID</param>
-        /// <returns>200 OK with ExperienceMoodDto, or 404 Not Found</returns>
-        /// <example>GET: api/ExperienceMood/Find/1 => { "experienceMoodId": 1, "experienceId": 3, "moodId": 5, "experienceName": "Hiked Skyline Trail", "moodName": "Energized", "experienceDate": "2022-07-05", "moodIntensityBefore": 3, "moodIntensityAfter": 8 }</example>
+        /// <param name="id">The Experience Mood ID</param>
+        /// <returns>
+        /// 200 OK
+        /// {ExperienceMoodDto}
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// GET: api/ExperienceMood/Find/1 -> {ExperienceMoodDto}
+        /// </example>
         [HttpGet("Find/{id}")]
         public async Task<ActionResult<ExperienceMoodDto>> FindExperienceMood(int id)
         {
-            // get the first experience mood matching the {id} 
-            var experienceMoodEntity = await _context.ExperienceMoods
-                .Include(em => em.Experience)
-                .Include(em => em.Mood)
-                .Where(em => em.ExperienceMoodId == id)
-                .FirstOrDefaultAsync();
+            var experienceMoodDto = await _experienceMoodService.FindExperienceMood(id);
 
-            // if the experience mood can't be located, return 404 Not Found
-            if (experienceMoodEntity == null)
+            if (experienceMoodDto == null)
             {
                 return NotFound();
             }
 
-            // creating an instance of ExperienceMoodDto
-            ExperienceMoodDto experienceMoodDto = new ExperienceMoodDto()
-            {
-                ExperienceMoodId = experienceMoodEntity.ExperienceMoodId,
-                ExperienceId = experienceMoodEntity.ExperienceId,
-                MoodId = experienceMoodEntity.MoodId,
-                ExperienceName = experienceMoodEntity.Experience.ExperienceName,
-                MoodName = experienceMoodEntity.Mood.MoodName,
-                ExperienceDate = experienceMoodEntity.Experience.ExperienceDate,
-                MoodIntensityBefore = experienceMoodEntity.MoodIntensityBefore,
-                MoodIntensityAfter = experienceMoodEntity.MoodIntensityAfter
-            };
-
             return Ok(experienceMoodDto);
         }
-
 
         /// <summary>
         /// Adds a new experience mood.
         /// </summary>
-        /// <param name="experienceMoodDto">The required information to add the experience mood (ExperienceId, MoodId, MoodIntensityBefore, MoodIntensityAfter)</param>
+        /// <param name="experienceMoodDto">The required information to add the experience mood</param>
         /// <returns>
         /// 201 Created
         /// Location: api/ExperienceMood/Find/{ExperienceMoodId}
         /// {ExperienceMoodDto}
         /// or
-        /// 400 Bad Request
+        /// 500 Internal Server Error
         /// </returns>
+        /// <example>
+        /// POST: api/ExperienceMood/Add
+        /// Request Body: {ExperienceMoodDto}
+        /// -> Response Code: 201 Created
+        /// Response Headers: Location: api/ExperienceMood/Find/{ExperienceMoodId}
+        /// </example>
         [HttpPost("Add")]
+        [Authorize]
         public async Task<ActionResult<ExperienceMood>> AddExperienceMood(ExperienceMoodDto experienceMoodDto)
         {
-            // validate existence of experience and mood
-            var experience = await _context.Experiences.FindAsync(experienceMoodDto.ExperienceId);
-            var mood = await _context.Moods.FindAsync(experienceMoodDto.MoodId);
+            ServiceResponse response = await _experienceMoodService.AddExperienceMood(experienceMoodDto);
 
-            if (experience == null || mood == null)
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
-                return NotFound("Invalid ExperienceId or MoodId.");
+                return NotFound(response.Messages);
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
             }
 
-            // creating a new instance of ExperienceMood
-            ExperienceMood experienceMood = new ExperienceMood()
-            {
-                ExperienceId = experience.ExperienceId,
-                MoodId = mood.MoodId,
-                Experience = experience,
-                Mood = mood,
-                MoodIntensityBefore = experienceMoodDto.MoodIntensityBefore,
-                MoodIntensityAfter = experienceMoodDto.MoodIntensityAfter
-            };
-
-            _context.ExperienceMoods.Add(experienceMood);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(FindExperienceMood), new { id = experienceMood.ExperienceMoodId }, experienceMoodDto);
+            return Created($"api/ExperienceMood/Find/{response.CreatedId}", experienceMoodDto);
         }
-
 
         /// <summary>
         /// Updates an existing experience mood.
         /// </summary>
-        /// <param name="id">ExperienceMood ID</param>
-        /// <param name="experienceMoodDto">The required information to update the experience mood (ExperienceMoodId, ExperienceId, MoodId, MoodIntensityBefore, MoodIntensityAfter)</param>
+        /// <param name="id">The Experience Mood ID</param>
+        /// <param name="experienceMoodDto">The required information to update the experience mood</param>
         /// <returns>
         /// 400 Bad Request
         /// or
@@ -150,69 +109,82 @@ namespace HobbyMood.Controllers
         /// or
         /// 204 No Content
         /// </returns>
-        [HttpPut("Update/{id}")]
-        public async Task<IActionResult> UpdateExperienceMood(int id, ExperienceMoodDto experienceMoodDto)
+        /// <example>
+        /// POST: api/ExperienceMood/Update/5
+        /// Request Body: {ExperienceMoodDto}
+        /// -> Response Code: 204 No Content
+        /// </example>
+        [HttpPost("Update/{id}")]
+        [Authorize]
+        public async Task<ActionResult> UpdateExperienceMood(int id, ExperienceMoodDto experienceMoodDto)
         {
-            // id in url must match ExperienceMoodId in POST body
             if (id != experienceMoodDto.ExperienceMoodId)
             {
                 return BadRequest();
             }
 
-            // finding the existing experience mood that matches
-            var existingExperienceMood = await _context.ExperienceMoods.FindAsync(id);
+            ServiceResponse response = await _experienceMoodService.UpdateExperienceMood(id, experienceMoodDto);
 
-            // if there is no existing experience mood
-            if (existingExperienceMood == null)
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
-                return NotFound();
+                return NotFound(response.Messages);
             }
-
-            // Validate existence of Experience and Mood
-            var experience = await _context.Experiences.FindAsync(experienceMoodDto.ExperienceId);
-            var mood = await _context.Moods.FindAsync(experienceMoodDto.MoodId);
-
-            if (experience == null || mood == null)
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
             {
-                return NotFound("Invalid ExperienceId or MoodId.");
+                return StatusCode(500, response.Messages);
             }
-
-            // updating the experience mood fields
-            existingExperienceMood.ExperienceId = experience.ExperienceId;
-            existingExperienceMood.MoodId = mood.MoodId;
-            existingExperienceMood.MoodIntensityBefore = experienceMoodDto.MoodIntensityBefore;
-            existingExperienceMood.MoodIntensityAfter = experienceMoodDto.MoodIntensityAfter;
-
-            _context.Entry(existingExperienceMood).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }
-
 
         /// <summary>
         /// Deletes an experience mood by ID.
         /// </summary>
-        /// <param name="id">ExperienceMood ID</param>
-        /// <returns>204 No Content, or 404 Not Found</returns>
-        /// <example>DELETE: api/ExperienceMood/Delete/1</example>
+        /// <param name="id">The Experience Mood ID to delete</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// DELETE: api/ExperienceMood/Delete/7
+        /// -> Response Code: 204 No Content
+        /// </example>
         [HttpDelete("Delete/{id}")]
-        public async Task<IActionResult> DeleteExperienceMood(int id)
+        [Authorize]
+        public async Task<ActionResult> DeleteExperienceMood(int id)
         {
-            // checking if the experience mood exists
-            var experienceMood = await _context.ExperienceMoods.FindAsync(id);
+            ServiceResponse response = await _experienceMoodService.DeleteExperienceMood(id);
 
-            if (experienceMood == null)
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
                 return NotFound();
             }
-
-            _context.ExperienceMoods.Remove(experienceMood);
-            await _context.SaveChangesAsync();
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
 
             return NoContent();
         }
 
-        
+        /// <summary>
+        /// Returns a list of experience moods for a specific experience.
+        /// </summary>
+        /// <param name="experienceId">The Experience ID</param>
+        /// <returns>
+        /// 200 OK
+        /// [{ExperienceMoodDto},{ExperienceMoodDto},..]
+        /// </returns>
+        /// <example>
+        /// GET: api/ExperienceMood/ListForExperience/3 -> [{ExperienceMoodDto},{ExperienceMoodDto},..]
+        /// </example>
+        [HttpGet("ListForExperience/{experienceId}")]
+        public async Task<ActionResult<IEnumerable<ExperienceMoodDto>>> ListExperienceMoodsForExperience(int experienceId)
+        {
+            var experienceMoods = await _experienceMoodService.ListExperienceMoodsForExperience(experienceId);
+            return Ok(experienceMoods);
+        }
+
     }
 }

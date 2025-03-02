@@ -22,12 +22,76 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/ExperiencePage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVBhZ2VcQ29uZmlybURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/ExperiencePage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVBhZ2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/ExperiencePage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVBhZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/ExperiencePage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVBhZ2VcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/ExperiencePage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVBhZ2VcTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/HobbyPage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9iYnlQYWdlXENvbmZpcm1EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/HobbyPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9iYnlQYWdlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/HobbyPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9iYnlQYWdlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/HobbyPage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9iYnlQYWdlXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/HobbyPage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9iYnlQYWdlXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/MoodPage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9vZFBhZ2VcQ29uZmlybURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/MoodPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9vZFBhZ2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/MoodPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9vZFBhZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/MoodPage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9vZFBhZ2VcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/MoodPage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9vZFBhZ2VcTmV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebDevelopmentCourse/http5225-2025-backend2/HobbyMood/HobbyMood/hobby-mood/HobbyMood/Views/Shared/Error.cshtml]

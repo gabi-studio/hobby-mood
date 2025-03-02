@@ -1,0 +1,23 @@
+﻿@model ExperienceDetails
+
+
+<h1>@Model.Experience.ExperienceName</h1>
+
+
+<p><strong>Hobby:</strong> @Model.Experience.HobbyName</p>
+<p><strong>Date:</strong> @Model.Experience.ExperienceDate.ToString("MMMM dd, yyyy")</p>
+<p><strong>Location:</strong> @Model.Experience.ExperienceLocation</p>
+<p><strong>Duration:</strong> @Model.Experience.DurationinHours hours</p>
+<p><strong>Cost:</strong> $@Model.Experience.ExperienceCost</p>
+
+<h3>Moods</h3>
+<ul>
+    @foreach (var mood in Model.ExperienceMoods)
+    {
+        <li>@mood.MoodName - Before: @mood.MoodIntensityBefore | After: @mood.MoodIntensityAfter</li>
+    }
+</ul>
+
+<a asp-action="Edit" asp-route-id="@Model.Experience.ExperienceId" class="btn btn-warning">Edit</a>
+<a asp-action="ConfirmDelete" asp-route-id="@Model.Experience.ExperienceId" class="btn btn-danger">Delete</a>
+<a asp-action="List" class="btn btn-secondary">Back to List</a>

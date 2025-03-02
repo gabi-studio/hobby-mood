@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ExperienceDto>
+
+@{
+    ViewData["Title"] = "Experiences";
+}
+
+<h1>Experiences</h1>
+<div>
+    <a href="/ExperiencePage/New" class="btn btn-primary">Add New Experience</a>
+
+</div>
+
+<div>
+    <a href="/Home/Index" class="btn btn-secondary">Back to Dashboard</a>
+</div>
+
+
+<div class="card">
+
+    @foreach (var experience in Model)
+    {
+        <div class="card-body">
+            <h3 class="card-title">
+                <a href="/ExperiencePage/Details/@experience.ExperienceId">@experience.ExperienceName</a>
+            </h3>
+            <div class="card-text">
+                <p><strong>Hobby:</strong> @experience.HobbyName</p>
+                <p><strong>Date:</strong> @experience.ExperienceDate.ToString("MMMM dd, yyyy")</p>
+                <p><strong>Location:</strong> @experience.ExperienceLocation</p>
+                <p><strong>Duration:</strong> @experience.DurationinHours hours</p>
+                <p><strong>Cost:</strong> $@experience.ExperienceCost</p>
+            </div>
+      
+        </div>
+    }
+</div>
+
+

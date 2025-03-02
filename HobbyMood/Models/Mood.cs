@@ -26,8 +26,8 @@ namespace HobbyMood.Models
         // mood name
         public string? MoodName { get; set; }
 
-        // top 3 hobbies that are associated with this mood
-        public List<string>? TopHobbies { get; set; }
+        //// top 3 hobbies that are associated with this mood
+        //public List<string>? TopHobbies { get; set; }
 
         // count of experiences that have this mood recorded
         public int MoodExperienceCount { get; set; }

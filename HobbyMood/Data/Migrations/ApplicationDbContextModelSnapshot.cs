@@ -39,12 +39,18 @@ namespace HobbyMood.Data.Migrations
                     b.Property<DateTime>("ExperienceDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ExperienceImagePath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ExperienceLocation")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExperienceName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("HasImage")
+                        .HasColumnType("bit");
 
                     b.Property<int>("HobbyId")
                         .HasColumnType("int");
@@ -335,7 +341,7 @@ namespace HobbyMood.Data.Migrations
             modelBuilder.Entity("HobbyMood.Models.ExperienceMood", b =>
                 {
                     b.HasOne("HobbyMood.Models.Experience", "Experience")
-                        .WithMany()
+                        .WithMany("ExperienceMoods")
                         .HasForeignKey("ExperienceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -400,6 +406,11 @@ namespace HobbyMood.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("HobbyMood.Models.Experience", b =>
+                {
+                    b.Navigation("ExperienceMoods");
                 });
 
             modelBuilder.Entity("HobbyMood.Models.Hobby", b =>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3uASGWTAm3cKb+5OFNV/Y7L7bHcimLZppFiE2Ul6Nn0=",
+  "Hash": "ofl3Wy8fw/i8fqq3mRy7Twz62ftabf/MvEBHacI8Yuo=",
   "Source": "HobbyMood",
   "BasePath": "_content/HobbyMood",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\wwwroot\\images\\experiences\\56607504-e6b9-4d8d-850e-0be7bed22764.JPEG",
+      "SourceId": "HobbyMood",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\wwwroot\\",
+      "BasePath": "_content/HobbyMood",
+      "RelativePath": "images/experiences/56607504-e6b9-4d8d-850e-0be7bed22764.JPEG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\experiences\\56607504-e6b9-4d8d-850e-0be7bed22764.JPEG"
     },
     {
       "Identity": "D:\\WebDevelopmentCourse\\http5225-2025-backend2\\HobbyMood\\HobbyMood\\hobby-mood\\HobbyMood\\wwwroot\\js\\site.js",

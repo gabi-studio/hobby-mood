@@ -10,7 +10,20 @@ html {
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  
 }
+
+.btn-primary {
+    background-color: #2B67AA !important;
+}
+
+.btn-primary:hover {
+    background-color: #053a74 !important;
+
+}
+
+
+
 
 html {
   position: relative;
@@ -18,5 +31,113 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #f9f8f7
+    margin: 0;
+    padding: 0;
+    color: #5B5B5F;
+}
+
+
+
+.navbar {
+    font-size: 1.50em;
+   
+    color: #2B67AA;
+}
+
+.navbar-brand {
+    font-size: 1.25em;
+    color: #2B67AA;
+}
+
+.nav-link {
+    color: #2B67AA;
+}
+
+
+h1 {
+    color: #960481;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #2B67AA;
+    margin-bottom: 15px;
+}
+
+.card {
+    margin-top: 10px;
+    background-color: #fff0;
+    border-style: none;
+}
+.card-body {
+    margin-top: 2rem;
+    background-color: #fdf4e3;
+    border-radius: 15px;
+}
+
+.dash-card {
+    margin: 0;
+    border-radius: 15px;
+    padding: 1.25rem;
+}
+
+a {
+    text-decoration: none;
+    color: #2B67AA;
+}
+a:hover {
+    color: #960481;
+
+}
+
+
+
+
+/*button styling*/
+
+.btn-edit, .btn-details, .btn-delete {
+    height: 25px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-details {
+    background-color: #2B67AA !important;
+}
+
+.btn-details:hover {
+    background-color: #053a74 !important;
+}
+
+
+.btn-edit {
+    background-color: #ffeecc !important;
+    color: #2B67AA;
+}
+.btn-edit:hover {
+    background-color: #d4a947 !important;
+    color: #2B67AA;
+
+}
+
+.btn-delete {
+    background-color: #921f40 !important;
+}
+
+.btn-delete:hover {
+    background-color: #801f2a !important;
+}
+
+.btn-edit:hover, .btn-details:hover, .btn-delete:hover {
+    color:#fff;
+    
+    
+}
+
+.experiencemood-container {
+    display:flex;
+    flex-direction:row;
 }

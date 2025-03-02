@@ -36,6 +36,12 @@ namespace HobbyMood.Models
         // foreign key to the hobbies table -- 1 hobby to many experiences
         public virtual Hobby? Hobby { get; set; }
 
+        public virtual ICollection<ExperienceMood> ExperienceMoods { get; set; } = new List<ExperienceMood>();
+
+
+        // for images:
+        public bool HasImage { get; set; } = false;
+        public string? ExperienceImagePath { get; set; }
 
     }
 
@@ -69,11 +75,18 @@ namespace HobbyMood.Models
         public DateTime ExperienceDate { get; set; }
 
 
-        // experience location
+        // experience locatione
         public string ExperienceLocation { get; set; }
 
 
         // the moods felt during this experience
-        public List<string>? ExperienceMoods { get; set; }
+        public ICollection<ExperienceMood> ExperienceMoods { get; set; } = new List<ExperienceMood>();
+
+
+        // for images:
+        public bool HasImage { get; set; } = false;
+        public string? ExperienceImagePath { get; set; }
+
+
     }
 }

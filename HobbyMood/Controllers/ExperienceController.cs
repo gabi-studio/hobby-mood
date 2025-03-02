@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using HobbyMood.Data;
+﻿using HobbyMood.Interfaces;
 using HobbyMood.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HobbyMood.Controllers
 {
@@ -14,149 +9,92 @@ namespace HobbyMood.Controllers
     [ApiController]
     public class ExperienceController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IExperienceService _experienceService;
 
-        // Dependency injection of database context
-        public ExperienceController(ApplicationDbContext context)
+        public ExperienceController(IExperienceService experienceService)
         {
-            _context = context;
+            _experienceService = experienceService;
         }
 
+
         /// <summary>
-        /// Returns a list of all experiences with related hobby and moods.
+        /// Returns a list of all Experiences
         /// </summary>
-        /// <returns>200 OK with ExperienceDto List</returns>
-        /// <example>GET: api/Experience/List => { "experienceId": 1, "experienceName": "Hiked the Skyline Trail", "hobbyName": "Hiking", "hobbyId": 2, "experienceCost": 0, "durationinHours": 3.75, "experienceDate": "2022-07-05T00:00:00", "experienceLocation": "Skyline Trail", "experienceMoods": [ "Energized", "Inpired", "Reflective" ] }, etc... </example>
+        /// <returns>
+        /// 200 OK
+        /// [{ExperienceDto},{ExperienceDto},..]
+        /// </returns>
+        /// <example>
+        /// GET: api/Experience/List -> [{ExperienceDto},{ExperienceDto},..]
+        /// </example>
         [HttpGet("List")]
         public async Task<ActionResult<IEnumerable<ExperienceDto>>> ListExperiences()
         {
-
-            List<Experience> experiences = await _context.Experiences
-                .Include(e => e.Hobby)
-                .ToListAsync();
-
-            // empty list of dto ExperienceDto
-            List<ExperienceDto> experienceDtos = new List<ExperienceDto>();
-
-            foreach (var e in experiences)
-            {
-                //creating an instance of ExperienceDto
-                experienceDtos.Add(new ExperienceDto()
-                {
-                    ExperienceId = e.ExperienceId,  
-                    ExperienceName = e.ExperienceName,
-                    HobbyId = e.HobbyId,
-                    HobbyName = e.Hobby.HobbyName,
-                    ExperienceCost = e.ExperienceCost,
-                    DurationinHours = e.DurationinHours,
-                    ExperienceDate = e.ExperienceDate,
-                    ExperienceLocation = e.ExperienceLocation,
-
-                    // getting the moods related to this experience as a list
-                    ExperienceMoods = _context.ExperienceMoods
-                        .Where(em => em.ExperienceId == e.ExperienceId)
-                        .Select(em => em.Mood.MoodName)
-                        .Distinct()
-                        .ToList()
-                });
-            }
-
-            return Ok(experienceDtos);
+            var experiences = await _experienceService.ListExperiences();
+            return Ok(experiences);
         }
 
 
+
         /// <summary>
-        /// Returns a specific experience by ID.
+        /// Returns a single Experience specified by its {id}
         /// </summary>
-        /// <param name="id">Experience ID</param>
-        /// <returns>200 OK with ExperienceDto, or 404 Not Found</returns>
-        /// <example>GET: api/Experience/Find/2 => { "experienceId": 2, "experienceName": "Did Lisboa Puzzle", "hobbyName": "Puzzles", "hobbyId": 9, "experienceCost": 25, "durationinHours": 6.5, "experienceDate": "2022-07-10T00:00:00", "experienceLocation": "Home", "experienceMoods": [ "Relaxed" ] }</example>
+        /// <param name="id">The Experience ID</param>
+        /// <returns>
+        /// 200 OK
+        /// {ExperienceDto}
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// GET: api/Experience/Find/1 -> {ExperienceDto}
+        /// </example>
         [HttpGet("Find/{id}")]
         public async Task<ActionResult<ExperienceDto>> FindExperience(int id)
         {
-            // get the first experience matching the {id} 
-            var experienceEntity = await _context.Experiences
-                .Include(e => e.Hobby)
-                .Where(e => e.ExperienceId == id)
-                .FirstOrDefaultAsync();
-            
+            var experience = await _experienceService.FindExperience(id);
+            if (experience == null) return NotFound();
 
-            // if thie experience can't be located, return 404 Not Found
-            if (experienceEntity == null)
-            {
-                return NotFound();
-            }
-
-            // getting the moods felt during this experience
-            var experienceMoods = await _context.ExperienceMoods
-                .Where(em => em.ExperienceId == id)
-                .Select(em => em.Mood.MoodName)
-                .Distinct()
-                .ToListAsync();
-
-            // create an instance of experienceDto
-            ExperienceDto experienceDto = new ExperienceDto()
-            {
-                ExperienceId = experienceEntity.ExperienceId,  
-                ExperienceName = experienceEntity.ExperienceName,
-                HobbyId = experienceEntity.HobbyId,
-                HobbyName = experienceEntity.Hobby.HobbyName,
-                ExperienceCost = experienceEntity.ExperienceCost,
-                DurationinHours = experienceEntity.DurationinHours,
-                ExperienceDate = experienceEntity.ExperienceDate,
-                ExperienceLocation = experienceEntity.ExperienceLocation,
-                ExperienceMoods = experienceMoods
-            };
-
-            // return 200 OK and experienceDto
-            return Ok(experienceDto);
+            return Ok(experience);
         }
 
 
         /// <summary>
-        /// Adds a new experience.
+        /// Adds an Experience
         /// </summary>
-        /// <param name="experienceDto">The required information to add the experience (ExperienceName, HobbyId, etc.)</param>
+        /// <param name="experienceDto">The required information to add the experience</param>
         /// <returns>
         /// 201 Created
         /// Location: api/Experience/Find/{ExperienceId}
         /// {ExperienceDto}
         /// or
-        /// 400 Bad Request
+        /// 500 Internal Server Error
         /// </returns>
+        /// <example>
+        /// POST: api/Experience/Add
+        /// Request Headers: Content-Type: application/json, cookie: .AspNetCore.Identity.Application={token}
+        /// Request Body: {ExperienceDto}
+        /// -> Response Code: 201 Created
+        /// Response Headers: Location: api/Experience/Find/{ExperienceId}
+        /// </example>
         [HttpPost("Add")]
-        public async Task<ActionResult<Experience>> AddExperience(ExperienceDto experienceDto)
+        [Authorize]
+        public async Task<ActionResult> AddExperience(ExperienceDto experienceDto)
         {
-            // Validate hobby existence
-            var hobby = await _context.Hobbies.FindAsync(experienceDto.HobbyId);
-            if (hobby == null)
-            {
-                return NotFound();
-            }
+            var response = await _experienceService.AddExperience(experienceDto);
 
-            // create new experience
-            Experience experience = new Experience()
-            {
-                ExperienceName = experienceDto.ExperienceName,
-                HobbyId = hobby.HobbyId,
-                ExperienceCost = experienceDto.ExperienceCost,
-                DurationinHours = experienceDto.DurationinHours,
-                ExperienceDate = experienceDto.ExperienceDate,
-                ExperienceLocation = experienceDto.ExperienceLocation
-            };
+            if (response.Status == ServiceResponse.ServiceStatus.Error)
+                return StatusCode(500, response.Messages);
 
-            _context.Experiences.Add(experience);
-            await _context.SaveChangesAsync();
-
-            // should return 201 Created with Location
-            return CreatedAtAction("FindExperience", new { id = experience.ExperienceId }, experienceDto);
+            return Created($"api/Experience/Find/{response.CreatedId}", experienceDto);
         }
 
+
         /// <summary>
-        /// Updates an existing experience.
+        /// Updates an existing Experience
         /// </summary>
-        /// <param name="id">Experience ID</param>
-        /// <param name="experienceDto">The required information to update the experience (ExperienceId, ExperienceName, etc.)</param>
+        /// <param name="id">The ID of the Experience to update</param>
+        /// <param name="experienceDto">The required information to update the experience</param>
         /// <returns>
         /// 400 Bad Request
         /// or
@@ -164,100 +102,96 @@ namespace HobbyMood.Controllers
         /// or
         /// 204 No Content
         /// </returns>
+        /// <example>
+        /// PUT: api/Experience/Update/5
+        /// Request Headers: Content-Type: application/json, cookie: .AspNetCore.Identity.Application={token} 
+        /// Request Body: {ExperienceDto}
+        /// -> Response Code: 204 No Content
+        /// </example>
+
         [HttpPut("Update/{id}")]
-        public async Task<IActionResult> UpdateExperience(int id, ExperienceDto experienceDto)
+        [Authorize]
+        public async Task<ActionResult> UpdateExperience(int id, ExperienceDto experienceDto)
         {
-            // id in url must match ExperienceId in POST body
-            if (id != experienceDto.ExperienceId)
-            {
-                //otherwise 400 Bad Request
-                return BadRequest();
-            }
+            if (id != experienceDto.ExperienceId) return BadRequest();
 
-            // finding the existing experience that matches
-            var existingExperience = await _context.Experiences.FindAsync(id);
+            var response = await _experienceService.UpdateExperience(id, experienceDto);
 
-            //if there is no existing experience
-            if (existingExperience == null)
-            {
-                //404 Not Found
-                return NotFound();
-            }
-
-            // Validate hobby existence
-            var hobby = await _context.Hobbies.FirstOrDefaultAsync(h => h.HobbyName == experienceDto.HobbyName);
-            if (hobby == null)
-            {
-                return NotFound();
-            }
-
-            // Update experience fields
-            existingExperience.ExperienceName = experienceDto.ExperienceName;
-            existingExperience.HobbyId = hobby.HobbyId;
-            existingExperience.ExperienceCost = experienceDto.ExperienceCost;
-            existingExperience.DurationinHours = experienceDto.DurationinHours;
-            existingExperience.ExperienceDate = experienceDto.ExperienceDate;
-            existingExperience.ExperienceLocation = experienceDto.ExperienceLocation;
-
-            // flag that object has been changed
-            _context.Entry(existingExperience).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ExperienceExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound) return NotFound();
+            if (response.Status == ServiceResponse.ServiceStatus.Error) return StatusCode(500, response.Messages);
 
             return NoContent();
         }
 
-        /// <summary>
-        /// Checks if an experience exists by ID.
-        /// </summary>
-        /// <param name="id">Experience ID</param>
-        /// <returns>True if experience exists, otherwise false.</returns>
-        private bool ExperienceExists(int id)
-        {
-            return _context.Experiences.Any(e => e.ExperienceId == id);
-        }
 
         /// <summary>
-        /// Deletes an experience by ID.
+        /// Deletes an Experience
         /// </summary>
-        /// <param name="id">Experience ID</param>
-        /// <returns>204 No Content, or 404 Not Found</returns>
-        /// <example>DELETE: api/Experience/Delete/1</example>
+        /// <param name="id">The ID of the Experience to delete</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// DELETE: api/Experience/Delete/7
+        /// Request Headers: C cookie: .AspNetCore.Identity.Application={token}
+        /// -> Response Code: 204 No Content
+        /// </example>
         [HttpDelete("Delete/{id}")]
-        public async Task<IActionResult> DeleteExperience(int id)
+        [Authorize]
+        public async Task<ActionResult> DeleteExperience(int id)
         {
-            //checking if the experience exists
-            var experience = await _context.Experiences.FindAsync(id);
-            
-            if (experience == null)
-            {
-                return NotFound();
-            }
+            var response = await _experienceService.DeleteExperience(id);
 
-            // delete related ExperienceMoods 
-            var experienceMoods = _context.ExperienceMoods.Where(em => em.ExperienceId == id);
-            _context.ExperienceMoods.RemoveRange(experienceMoods);
-            await _context.SaveChangesAsync();
-
-            // delete the experience
-            _context.Experiences.Remove(experience);
-            await _context.SaveChangesAsync();
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound) return NotFound();
+            if (response.Status == ServiceResponse.ServiceStatus.Error) return StatusCode(500, response.Messages);
 
             return NoContent();
         }
+
+
+
+        /// <summary>
+        /// Updates an Experience's image and saves it to a designated location
+        /// </summary>
+        /// <param name="id">The Experience ID for which the image is being updated</param>
+        /// <param name="experienceImage">The new image file</param>
+        /// <returns>
+        /// 200 OK
+        /// or
+        /// 404 Not Found
+        /// or
+        /// 500 Internal Server Error
+        /// </returns>
+        /// <example>
+        /// PUT: api/Experience/UpdateExperienceImage/5
+        /// HEADERS: Content-Type: Multi-part/form-data, Cookie: .AspNetCore.Identity.Application={token}
+        /// FORM DATA:
+        /// ------boundary
+        /// Content-Disposition: form-data; name="experienceImage"; filename="experience1.jpg"
+        /// Content-Type: image/jpeg
+        /// </example>
+        /// <example>
+        /// curl "https://localhost:xx/api/Experience/UpdateExperienceImage/5" -H "Cookie: .AspNetCore.Identity.Application={token}" -X "PUT" -F experienceImage=@experienve1.jpg
+        /// </example>
+        [HttpPut("UpdateExperienceImage/{id}")]
+        [Authorize]
+        public async Task<IActionResult> UpdateExperienceImage(int id, IFormFile experienceImage)
+        {
+            ServiceResponse response = await _experienceService.UpdateExperienceImage(id, experienceImage);
+
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
+            {
+                return NotFound();
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
+
+            return Ok(new { message = "Image updated successfully." });
+        }
+
     }
 }

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HobbyMood.Models.MoodDto>
+
+@{
+    ViewData["Title"] = "Moods";
+}
+
+<h1>List of Moods</h1>
+
+<p>
+    <a asp-action="New" class="btn btn-primary">Add a New Mood</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.MoodName)</th>
+            <th>Total Experiences</th>
+            <th>Manage Moods</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.MoodName)</td>
+                <td>@item.MoodExperienceCount</td>
+                <td>
+                    <a asp-action="Details" class="btn-details" asp-route-id="@item.MoodId">Details</a> |
+                    <a asp-action="Edit" class="btn-edit" asp-route-id="@item.MoodId">Edit</a> |
+                    <a asp-action="ConfirmDelete" class="btn-delete" asp-route-id="@item.MoodId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a href="/Home/Index" class="btn btn-secondary">Back to Dashboard</a>
+</div>

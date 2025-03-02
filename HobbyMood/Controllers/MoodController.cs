@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using HobbyMood.Data;
+﻿using HobbyMood.Interfaces;
 using HobbyMood.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HobbyMood.Controllers
 {
@@ -14,147 +9,111 @@ namespace HobbyMood.Controllers
     [ApiController]
     public class MoodController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IMoodService _moodService;
 
-        // Dependency injection of database context
-        public MoodController(ApplicationDbContext context)
+        public MoodController(IMoodService moodService)
         {
-            _context = context;
+            _moodService = moodService;
         }
 
         /// <summary>
-        /// Returns a list of moods with experience count and top hobbies.
+        /// Returns a list of all moods.
         /// </summary>
-        /// <returns>200 OK with MoodDto List</returns>
-        /// <example>GET: api/Mood/List => { "moodId": 1, "moodName": "Relaxed", "moodExperienceCount": 5, "topHobbies": ["Reading", "Gardening", "Puzzles"] }</example>
+        /// <returns>
+        /// 200 OK
+        /// [{MoodDto},{MoodDto},..]
+        /// </returns>
+        /// <example>
+        /// GET: api/Mood/List -> [{MoodDto},{MoodDto},..]
+        /// </example>
         [HttpGet("List")]
         public async Task<ActionResult<IEnumerable<MoodDto>>> ListMoods()
         {
-            List<Mood> moods = await _context.Moods.ToListAsync();
-
-            // empty list of dto MoodDto
-            List<MoodDto> moodDtos = new List<MoodDto>();
-
-            foreach (Mood m in moods)
-            {
-                // creating an instance of MoodDto
-                moodDtos.Add(new MoodDto()
-                {
-                    MoodId = m.MoodId,
-                    MoodName = m.MoodName,
-
-                    // counting the number of experiences associated with this mood
-                    MoodExperienceCount = _context.ExperienceMoods
-                        .Where(em => em.MoodId == m.MoodId)
-                        .Select(em => em.ExperienceId)
-                        .Distinct()
-                        .Count(),
-
-                    // getting the top 3 hobbies linked to this mood
-                    TopHobbies = _context.ExperienceMoods
-                        .Where(em => em.MoodId == m.MoodId)
-                        .Select(em => em.Experience.Hobby.HobbyName)
-                        .GroupBy(h => h)
-                        .OrderByDescending(g => g.Count())
-                        .Take(3)
-                        .Select(g => g.Key)
-                        .ToList()
-                });
-            }
-
-            return Ok(moodDtos);
+            var moods = await _moodService.ListMoods();
+            return Ok(moods);
         }
-
 
         /// <summary>
         /// Returns a specific mood by ID.
         /// </summary>
-        /// <param name="id">Mood ID</param>
-        /// <returns>200 OK with MoodDto, or 404 Not Found</returns>
-        /// <example>GET: api/Mood/Find/1 => { "moodId": 1, "moodName": "Relaxed", "moodExperienceCount": 5, "topHobbies": ["Reading", "Gardening", "Puzzles"] }</example>
+        /// <param name="id">The Mood ID</param>
+        /// <returns>
+        /// 200 OK
+        /// {MoodDto}
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// GET: api/Mood/Find/1 -> {MoodDto}
+        /// </example>
         [HttpGet("Find/{id}")]
         public async Task<ActionResult<MoodDto>> FindMood(int id)
         {
-            // get the first mood matching the {id} 
-            var moodEntity = await _context.Moods.FindAsync(id);
+            var mood = await _moodService.FindMood(id);
 
-            // if this mood can't be located, return 404 Not Found
-            if (moodEntity == null)
+            if (mood == null)
             {
                 return NotFound();
             }
 
-            // counting the number of experiences linked to this mood
-            var moodExperienceCount = await _context.ExperienceMoods
-                .Where(em => em.MoodId == id)
-                .Select(em => em.ExperienceId)
-                .Distinct()
-                .CountAsync();
-
-            // getting the top 3 hobbies linked to this mood
-            var topHobbies = await _context.ExperienceMoods
-                .Where(em => em.MoodId == id)
-                .Select(em => em.Experience.Hobby.HobbyName)
-                .GroupBy(h => h)
-                .OrderByDescending(g => g.Count())
-                .Take(3)
-                .Select(g => g.Key)
-                .ToListAsync();
-
-            // create an instance of MoodDto
-            MoodDto moodDto = new MoodDto()
-            {
-                MoodId = moodEntity.MoodId,
-                MoodName = moodEntity.MoodName,
-                MoodExperienceCount = moodExperienceCount,
-                TopHobbies = topHobbies
-            };
-
-            // return 200 OK and moodDto
-            return Ok(moodDto);
+            return Ok(mood);
         }
 
+        /// <summary>
+        /// Lists experiences related to a specific mood.
+        /// </summary>
+        /// <param name="moodId">The Mood ID</param>
+        /// <returns>
+        /// 200 OK
+        /// [{ExperienceDto},{ExperienceDto},..]
+        /// </returns>
+        /// <example>
+        /// GET: api/Mood/Experiences/3 -> [{ExperienceDto},{ExperienceDto},..]
+        /// </example>
+        [HttpGet("Experiences/{moodId}")]
+        public async Task<ActionResult<IEnumerable<ExperienceDto>>> ListExperiencesForMood(int moodId)
+        {
+            var experiences = await _moodService.ListExperiencesForMood(moodId);
+            return Ok(experiences);
+        }
 
         /// <summary>
         /// Adds a new mood.
         /// </summary>
-        /// <param name="moodDto">The required information to add the mood (MoodName)</param>
+        /// <param name="moodDto">The required information to add the mood</param>
         /// <returns>
         /// 201 Created
         /// Location: api/Mood/Find/{MoodId}
         /// {MoodDto}
         /// or
-        /// 400 Bad Request
+        /// 500 Internal Server Error
         /// </returns>
+        /// <example>
+        /// POST: api/Mood/Add
+        /// Request Headers: Content-Type: application/json, cookie: .AspNetCore.Identity.Application={token}
+        /// Request Body: {MoodDto}
+        /// -> Response Code: 201 Created
+        /// Response Headers: Location: api/Mood/Find/{MoodId}
+        /// </example>
         [HttpPost("Add")]
+        [Authorize]
         public async Task<ActionResult<Mood>> AddMood(MoodDto moodDto)
         {
-            // Validate that MoodName is not empty
-            if (string.IsNullOrWhiteSpace(moodDto.MoodName))
+            ServiceResponse response = await _moodService.AddMood(moodDto);
+
+            if (response.Status == ServiceResponse.ServiceStatus.Error)
             {
-                return BadRequest();
+                return StatusCode(500, response.Messages);
             }
 
-            // create a new Mood entity
-            Mood mood = new Mood()
-            {
-                MoodName = moodDto.MoodName
-            };
-
-            _context.Moods.Add(mood);
-            await _context.SaveChangesAsync();
-
-            moodDto.MoodId = mood.MoodId;
-
-            // should return 201 Created with Location
-            return CreatedAtAction("FindMood", new { id = mood.MoodId }, moodDto);
+            return Created($"api/Mood/Find/{response.CreatedId}", moodDto);
         }
 
         /// <summary>
         /// Updates an existing mood.
         /// </summary>
-        /// <param name="id">Mood ID</param>
-        /// <param name="moodDto">The required information to update the mood (MoodId, MoodName)</param>
+        /// <param name="id">The Mood ID</param>
+        /// <param name="moodDto">The required information to update the mood</param>
         /// <returns>
         /// 400 Bad Request
         /// or
@@ -162,84 +121,63 @@ namespace HobbyMood.Controllers
         /// or
         /// 204 No Content
         /// </returns>
+        /// <example>
+        /// PUT: api/Mood/Update/5
+        /// Request Headers: Content-Type: application/json, cookie: .AspNetCore.Identity.Application={token}
+        /// Request Body: {MoodDto}
+        /// -> Response Code: 204 No Content
+        /// </example>
         [HttpPut("Update/{id}")]
-        public async Task<IActionResult> UpdateMood(int id, MoodDto moodDto)
+        [Authorize]
+        public async Task<ActionResult> UpdateMood(int id, MoodDto moodDto)
         {
-            // id in url must match MoodId in POST body
             if (id != moodDto.MoodId)
             {
                 return BadRequest();
             }
 
-            // finding the existing mood that matches
-            var existingMood = await _context.Moods.FindAsync(id);
+            ServiceResponse response = await _moodService.UpdateMood(id, moodDto);
 
-            // if there is no existing mood
-            if (existingMood == null)
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
-                return NotFound();
+                return NotFound(response.Messages);
             }
-
-            // Update mood name
-            existingMood.MoodName = moodDto.MoodName;
-
-            // flag that object has been changed
-            _context.Entry(existingMood).State = EntityState.Modified;
-
-            try
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MoodExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return StatusCode(500, response.Messages);
             }
 
             return NoContent();
         }
 
         /// <summary>
-        /// Checks if a mood exists by ID.
-        /// </summary>
-        /// <param name="id">Mood ID</param>
-        /// <returns>True if mood exists, otherwise false.</returns>
-        private bool MoodExists(int id)
-        {
-            return _context.Moods.Any(m => m.MoodId == id);
-        }
-
-        /// <summary>
         /// Deletes a mood by ID.
         /// </summary>
-        /// <param name="id">Mood ID</param>
-        /// <returns>204 No Content, or 404 Not Found</returns>
-        /// <example>DELETE: api/Mood/Delete/1</example>
+        /// <param name="id">The Mood ID to delete</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// DELETE: api/Mood/Delete/7
+        /// Request Headers: cookie: .AspNetCore.Identity.Application={token} 
+        /// -> Response Code: 204 No Content
+        /// </example>
         [HttpDelete("Delete/{id}")]
-        public async Task<IActionResult> DeleteMood(int id)
+        [Authorize]
+        public async Task<ActionResult> DeleteMood(int id)
         {
-            // checking if the mood exists
-            var mood = await _context.Moods.FindAsync(id);
+            ServiceResponse response = await _moodService.DeleteMood(id);
 
-            if (mood == null)
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
             {
                 return NotFound();
             }
-
-            // delete related ExperienceMood records 
-            var experienceMoods = _context.ExperienceMoods.Where(em => em.MoodId == id);
-            _context.ExperienceMoods.RemoveRange(experienceMoods);
-            await _context.SaveChangesAsync();
-
-            // delete the mood
-            _context.Moods.Remove(mood);
-            await _context.SaveChangesAsync();
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
 
             return NoContent();
         }

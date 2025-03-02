@@ -1,7 +1,10 @@
 using HobbyMood.Data;
+using HobbyMood.Interfaces;
+using HobbyMood.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Identity;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +20,15 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddScoped<IHobbyService, HobbyService>();
+builder.Services.AddScoped<IMoodService, MoodService>();
+builder.Services.AddScoped<IExperienceService, ExperienceService>();
+builder.Services.AddScoped<IExperienceMoodService, ExperienceMoodService>();
+
+
+
+
 
 //swagger
 builder.Services.AddSwaggerGen(c =>
@@ -42,7 +54,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-        c.RoutePrefix = string.Empty; // Set Swagger UI at root (/)
+        c.RoutePrefix = "swagger"; // Set Swagger UI at root (/)
     });
     //
 }
@@ -58,7 +70,17 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"); 
+});
+
+
 
 app.MapControllerRoute(
     name: "default",

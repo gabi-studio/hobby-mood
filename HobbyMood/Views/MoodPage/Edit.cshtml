@@ -1,0 +1,19 @@
+﻿@model HobbyMood.Models.MoodDto
+
+@{
+    ViewData["Title"] = "Edit Mood";
+}
+
+<h1>Edit Mood</h1>
+
+<form method="POST" asp-action="Update" asp-route-id="@Model.MoodId">
+    <input type="hidden" name="MoodId" value="@Model.MoodId" />
+
+    <div class="form-group">
+        <label for="MoodName">Mood Name:</label>
+        <input type="text" name="MoodName" class="form-control" value="@Model.MoodName" required />
+    </div>
+
+    <input type="submit" value="Save Changes" class="btn btn-success" />
+    <a asp-action="List" asp-route-id="@Model.MoodId" class="btn btn-secondary">Cancel</a>
+</form>

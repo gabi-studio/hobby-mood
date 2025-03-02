@@ -1,0 +1,32 @@
+﻿@model HobbyMood.Models.ViewModels.HobbyDetails
+
+@{
+    ViewData["Title"] = "Hobby Details";
+}
+
+<h1>@Model.Hobby.HobbyName</h1>
+
+<h3>Statistics</h3>
+<ul>
+    <li>Total Experiences: @Model.Hobby.NumberofExperiences</li>
+    <li>Total Hours Spent: @Model.Hobby.HoursSpent</li>
+    
+</ul>
+<h3>Experiences</h3>
+<ul>
+    @foreach (var experience in Model.HobbyExperiences)
+    {
+        <li>
+            <p>@experience.ExperienceDate.ToString("MMMM dd, yyyy") - <a href="/ExperiencePage/Details/@experience.ExperienceId">@experience.ExperienceName</a> </p>
+            
+        </li>
+    }
+</ul>
+
+
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Hobby.HobbyId" class="btn btn-warning">Edit</a>
+    <a asp-action="ConfirmDelete" asp-route-id="@Model.Hobby.HobbyId" class="btn btn-danger">Delete</a>
+    <a asp-action="List" class="btn btn-secondary">Back to List</a>
+</div>

@@ -1,8 +1,51 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Hobby Mood Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <h1 class="text-center">Welcome to the HobbyMood Project!</h1>
+    <div class="text-center">
+        <p>The Hobby Mood Project is designed to track and analyze how different hobbies and experiences impact moods. </p>
+        <p>By logging activities and their emotional effects, users can discover patterns and make informed decisions about their well-being.</p>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Hobby -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="dash-card">
+                    <h5 class="card-title">Manage Hobbies</h5>
+                    <p class="card-text">Discover new hobbies and track how they influence mood.</p>
+                    <a href="/HobbyPage/List" class="btn-details">View All Hobbies</a>
+                    <a href="/HobbyPage/New" class="btn-edit">Add a new Hobby</a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="dash-card">
+                    <h5 class="card-title">Manage Experiences</h5>
+                    <p class="card-text">Log and reflect on activities and experiences to understand how hobbies they affect moods.</p>
+                    <a href="/ExperiencePage/List" class="btn-details">View All Experiences</a>
+                    <a href="/ExperiencePage/New" class="btn-edit">Add a new Experience</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mood -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="dash-card">
+                    <h5 class="card-title">Manage Moods</h5>
+                    <p class="card-text">View logged moods and identify activities that boost well-being.</p>
+                    <a href="/MoodPage/List" class="btn-details">View All Moods</a>
+                    <a href="/MoodPage/New" class="btn-edit">Add a new Mood</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>
