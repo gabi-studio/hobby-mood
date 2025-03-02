@@ -11,6 +11,14 @@ The API allows users to log experiences, associate them with moods, and observe 
 
 ---
 
+
+## **Features**
+- **Track your hobbies**: Create Experiences and categorize them by hobbies.
+- **Log your experiences**: Add experiences with details such as **cost, location, duration, and date**.
+- **Record your moods**: Attach moods to experiences and track emotional changes before and after the experience.
+
+--
+
 ## **API Endpoints**  
 
 ### **Experience API**  
@@ -55,11 +63,6 @@ The API allows users to log experiences, associate them with moods, and observe 
 - **GET** `/api/ExperienceMood/ListForExperience/{experienceId}` - Get all moods linked to a specific experience  
 
 ---
-
-## **Features**
-- **Track your hobbies**: Create Experiences and categorize them by hobbies.
-- **Log your experiences**: Add experiences with details such as **cost, location, duration, and date**.
-- **Record your moods**: Attach moods to experiences and track emotional changes before and after the experience.
 
 
 
